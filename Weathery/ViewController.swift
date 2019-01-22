@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         placePicker.delegate = self
         placePicker.dataSource = self
         
-        let forecastService = ForecastService(APIKey: "34419891dfa33243b41e4e137395649f")
+        let forecastService = ForecastService(APIKey: [API-KEY])
         forecastService.getForecast(latitude: 40.1535005, longitudude: 44.4185271) { (currentWeather) in
             DispatchQueue.main.sync {
                 self.regionName.text = self.places[0].name
